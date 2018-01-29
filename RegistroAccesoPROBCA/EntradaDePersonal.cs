@@ -12,9 +12,9 @@ namespace RegistroAccesoPROBCA
         /*CONEXION IBIX PRODUCCION*/
         //SqlConnection conexionIBIX = new SqlConnection(@"Data Source=192.168.1.41;Initial Catalog=IBIXLocal;User ID=IBIXChecador;Password=ibixchecamos");
         /*CONEXION IBIX TEST*/
-        SqlConnection conexionIBIX = new SqlConnection(@"Data Source=192.168.1.41;Initial Catalog=IBIXLocal;User ID=sa;Password=TISt33lgo2014**Sys");
+        //SqlConnection conexionIBIX = new SqlConnection(@"Data Source=192.168.1.41;Initial Catalog=IBIXLocal;User ID=sa;Password=TISt33lgo2014**Sys");
         /*CONEXION IBIX LOCAL*/
-        //SqlConnection conexionIBIX = new SqlConnection(@"Data Source=DESKTOP-TCCMQI0\SAM2;Initial Catalog=IBIXLocal;User ID=sa;Password=maftec09");
+        SqlConnection conexionIBIX = new SqlConnection(@"Data Source=DESKTOP-TCCMQI0\SAM2;Initial Catalog=IBIXLocal;User ID=sa;Password=maftec09");
         public string DepartamentoBLA = "";
         public string DepaText = "";
         public string DepaID = "";
