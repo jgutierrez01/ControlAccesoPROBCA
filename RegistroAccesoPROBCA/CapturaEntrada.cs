@@ -10,11 +10,11 @@ namespace RegistroAccesoPROBCA
     {        
         SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexionproyectoid);
         /*CONEXION IBIX PRODUCCION*/
-        //SqlConnection conexionIBIX = new SqlConnection(@"Data Source=192.168.1.41;Initial Catalog=IBIXLocal;User ID=IBIXChecador;Password=ibixchecamos");
+        SqlConnection conexionIBIX = new SqlConnection(@"Data Source=192.168.1.41;Initial Catalog=IBIXLocal;User ID=IBIXChecador;Password=ibixchecamos");
         /*CONEXION IBIX TEST*/
         //SqlConnection conexionIBIX = new SqlConnection(@"Data Source=192.168.1.41;Initial Catalog=IBIXLocal;User ID=sa;Password=TISt33lgo2014**Sys");
         /*CONEXION IBIX LOCAL*/
-        SqlConnection conexionIBIX = new SqlConnection(@"Data Source=DESKTOP-TCCMQI0\SAM2;Initial Catalog=IBIXLocal;User ID=sa;Password=maftec09");
+        //SqlConnection conexionIBIX = new SqlConnection(@"Data Source=DESKTOP-TCCMQI0\SAM2;Initial Catalog=IBIXLocal;User ID=sa;Password=maftec09");
         private static DataGridView tmpGrid = new DataGridView();
         public bool EsEdicion = false;
         public static bool ActivarMetodos = true;
@@ -52,7 +52,7 @@ namespace RegistroAccesoPROBCA
                 cmbAsunto.Enabled = false;
                 cmbDepartamento.Enabled = false;
                 txtCompania.Enabled = false;
-                txtDescripcion.Enabled = false;
+                txtDescripcion.Enabled = true;
             }else
             {
                 chkEmpleado.Enabled = false;
@@ -221,11 +221,12 @@ namespace RegistroAccesoPROBCA
                             RegistroAccesoID = int.Parse(this.txtRegistroAccesoID.Text.Trim());
                             string query = "";
                             if (chkEmpleado.Checked)
-                            {                                
+                            {
                                 query += "UPDATE RegistroAccesoSteelgo SET " +
                                             " Tarjeton = '" + this.txtTarjeton.Text.Trim().ToUpper() + "'," +
-                                            " Placa = '" + this.txtPlacasVehiculo.Text.Trim().ToUpper() + "'," +                                            
-                                            " Conductor = '" + this.txtCondutor.Text.Trim().ToUpper() + "' " +
+                                            " Placa = '" + this.txtPlacasVehiculo.Text.Trim().ToUpper() + "'," +
+                                            " Conductor = '" + this.txtCondutor.Text.Trim().ToUpper() + "', " +
+                                            " Comentarios = '" + txtDescripcion.Text + "' " +
                                             " WHERE RegistroAccesoID = " + RegistroAccesoID + "  AND Activo = 1";
                             }
                             else
@@ -1248,7 +1249,7 @@ namespace RegistroAccesoPROBCA
                 cmbDepartamento.Enabled = false;
                 txtCompania.Enabled = false;
                 cmbAsunto.Enabled = false;
-                txtDescripcion.Enabled = false;
+                txtDescripcion.Enabled = true;
             }
             else
             {

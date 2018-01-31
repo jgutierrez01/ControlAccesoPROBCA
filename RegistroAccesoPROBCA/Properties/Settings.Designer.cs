@@ -26,12 +26,12 @@ namespace RegistroAccesoPROBCA.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        /*PRODUCCION*/
-        //[global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=192.168.1.4;Initial Catalog=AccesoSteelgo-Vigilancia;MultipleActiveResultSets=True;User ID=accesosteelgo;Password=123$PROBCA")]
         /*TEST*/
-        //[global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=192.168.1.13\SAM3;Initial Catalog=AccesoSteelgo-Vigilancia;MultipleActiveResultSets=True;User ID=sam;Password=sam123!")]
+        //[global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=192.168.1.4;Initial Catalog=AccesoSteelgo-Vigilancia;MultipleActiveResultSets=True;User ID=accesosteelgo;Password=123$PROBCA")]
+        /*PRODUCCION*/
+        [global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=192.168.1.13\SAM3;Initial Catalog=AccesoSteelgo-Vigilancia;MultipleActiveResultSets=True;User ID=sam;Password=sam123!")]
         /*LOCAL*/
-        [global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=DESKTOP-TCCMQI0\SAM3;Initial Catalog=AccesoSteelgo-Vigilancia;MultipleActiveResultSets=True;User ID=sa;Password=maftec09")]        
+        //[global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=DESKTOP-TCCMQI0\SAM3;Initial Catalog=AccesoSteelgo-Vigilancia;MultipleActiveResultSets=True;User ID=sa;Password=maftec09")]        
         public string conexionproyectoid
         {
             get
