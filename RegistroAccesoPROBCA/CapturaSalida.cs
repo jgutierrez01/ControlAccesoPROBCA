@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -10,7 +11,8 @@ namespace RegistroAccesoPROBCA
     {
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
-        SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexionproyectoid);
+        //SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexionproyectoid);
+        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["ConexionControlAcceso"].ConnectionString);
         private Dictionary<string, string> Persona;
         private Dictionary<int, string> DicSalida;        
         

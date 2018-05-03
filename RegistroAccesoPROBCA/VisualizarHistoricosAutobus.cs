@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -13,7 +14,8 @@ namespace RegistroAccesoPROBCA
 {
     public partial class VisualizarHistoricosAutobus : Form
     {
-        SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexionproyectoid);
+        //SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexionproyectoid);
+        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["ConexionControlAcceso"].ConnectionString);
         public VisualizarHistoricosAutobus()
         {
             InitializeComponent();

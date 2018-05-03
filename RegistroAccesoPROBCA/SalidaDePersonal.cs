@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -7,7 +8,8 @@ namespace RegistroAccesoPROBCA
 {
     public partial class SalidaDePersonal : Form
     {
-        SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexionproyectoid);     
+        //SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexionproyectoid);     
+        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["ConexionControlAcceso"].ConnectionString);
         public SalidaDePersonal()
         {
             InitializeComponent();
